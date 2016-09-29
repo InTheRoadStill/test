@@ -1,0 +1,40 @@
+<include file="Public/header" />
+    
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">
+                        资源列表
+                    </h1>
+                </div>
+            </div>
+            <!-- /. ROW  -->
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <tr>
+                            <th>ID</th>
+                            <th>姓名</th>
+                            <th>班级</th>
+                            <th>学号</th>
+                            <th>GitHub</th>
+                            <th>状态</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                        <foreach name="list" item="vo">
+                        <tr>
+                            <td>{$vo.url_id}</td>
+                            <td>{$vo.username}</td>
+                            <td>{$vo.classname}</td>
+                            <td>{$vo.personid}</td>
+                            <td><a href="{$vo.github_url}">{$vo.github_url}</a></td>
+                            <td>{$vo.status|getStatusValue}</td>
+                            <td>{$vo.addtime|date="Y-m-d H:i:s", ###}</td>
+                            <td><a href="{:U('Admin/Urls/edit', array('id'=>$vo['url_id']))}">编辑</a> | <a href="{:U('Admin/Urls/del', array('id'=>$vo['url_id']))}">删除</a> | <a href="{:U('Admin/Urls/reedit', array('id'=>$vo['url_id']))}">标记成功</a></td>
+                        </tr>
+                        </foreach>
+                    </table>
+                </div>
+            </div>
+
+<include file="Public/footer" />

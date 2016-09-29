@@ -1,0 +1,49 @@
+<include file="Public/header" />
+    
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">
+                        编辑
+                    </h1>
+                </div>
+            </div>
+            <!-- /. ROW  -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form role="form" method="post" action="{:U('Urls/save')}">
+                              <div class="form-group">
+                                <label for="username">姓名：</label>
+                                <input type="text" name="username" class="form-control" id="username" placeholder="姓名，如：王伟" value="{$result.username}" />
+                              </div>
+                              <div class="form-group">
+                                <label for="personid">学号：</label>
+                                <input type="text" name="personid" class="form-control" id="personid" placeholder="学号" value="{$result.personid}" />
+                              </div>
+                              <div class="form-group">
+                                <label for="classname">班级：</label>
+                                <input type="radio" name="classname" value="14" checked="checked"> 网络工程2014
+                                <input type="radio" value="0"> 其他
+                              </div>
+                              <div class="form-group">
+                                <label for="github_url">GitHub主页：</label>
+                                <input type="text" name="github_url" class="form-control" id="github_url" placeholder="GitHub主页，如：https://github.com/top-think" value="{$result.github_url}" />
+                              </div>
+                              <input type="hidden" name="url_id" value="{$result.url_id}">        
+                              <input type="hidden" name="status" value="{$result.status}">        
+                              <button type="submit" class="btn btn-primary">提 交</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>标准格式</h4>
+                            姓名：王伟<br />
+                            学号：140101521<br />
+                            GitHub主页：https://github.com/top-think<br />
+                            备注：格式不标准，有可能不能通过提交
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<include file="Public/footer" />

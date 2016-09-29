@@ -1,0 +1,21 @@
+<include file="Public/head" />
+	<div id="content">
+		<h3>资源列表</h3>
+		<div class="wrapper">
+			<table class="table">
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>GitHub</th>
+				</tr>
+				<foreach name="list" item="vo">
+				<tr>
+					<td>{$vo.url_id}</td>
+					<td>{$vo.username}</td>
+					<td><a href="{$vo.github_url}" target="_blank">{$vo.github_url}</a></td>
+				</tr>
+				</foreach>
+			</table>
+		</div>
+	</div>
+<include file="Public/footer" />

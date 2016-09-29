@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub提交网站 - 首页</title>
+
+<!-- Bootstrap -->
+<link href="./Public/css/bootstrap.min.css" rel="stylesheet">
+<link href="./Public/css/custom.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="main">
+	<div id="head">
+		<h1>GitHub提交网站</h1>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="index.html">帮助教程</a></li>
+				<li><a href="page.html">GitHub资源列表</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div class="jumbotron">
+			<h1>程序员，值得拥有</h1>
+			<p>如果你是一名程序员，你应该拥有一个GitHub账号用于展示你的源码。您希望您的GitHub账号和更多其他人分享吗？你只需要提交到我们的网站，一般当天审核通过，您的GitHub将显示在我们的资源列表中！</p>
+		</div>
+		<div class="submitform">
+			<div class="row">
+				<div class="col-md-6">
+					<form role="form" method="post" action="">
+					  <div class="form-group">
+					    <label for="username">姓名：</label>
+					    <input type="text" name="username" class="form-control" id="username" placeholder="姓名，如：王伟">
+					  </div>
+					  <div class="form-group">
+					    <label for="personid">学号：</label>
+					    <input type="text" name="personid" class="form-control" id="personid" placeholder="学号">
+					  </div>
+					  <div class="form-group">
+					    <label for="classname">班级：</label>
+					    <input type="radio" name="classname" value="14" checked="checked"> 网络工程2014
+					    <input type="radio" value="0"> 其他
+					  </div>
+					  <div class="form-group">
+					  	<label for="github_url">GitHub主页：</label>
+					  	<input type="text" name="github_url" class="form-control" id="github_url" placeholder="GitHub主页，如：https://github.com/top-think">
+					  </div>					  
+					  <button type="submit" class="btn btn-primary">提 交</button>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<h4>标准格式</h4>
+					姓名：王伟<br />
+					学号：140101521<br />
+					GitHub主页：https://github.com/top-think<br />
+					备注：格式不标准，有可能不能通过提交
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>版权所有 @ webjust.org</p>
+	</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="./Public/js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="./Public/js/bootstrap.min.js"></script>
+</body>
+</html>
